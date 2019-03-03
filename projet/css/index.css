@@ -1,0 +1,173 @@
+/******************* Parti Amelie *******************/
+
+body {
+	margin: 0;
+	overflow: hidden;
+	background-color: pink;
+}
+
+/* Entête */
+
+#entete{
+	text-align: center;
+	transition: margin-left 0.5s;
+
+}
+
+/* Menu de gauche */
+
+.mg_contenu {
+	margin-top: 100px;
+}
+
+.menuGauche{
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: green;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+
+.menuGauche a{
+	padding: 8px 8px 8px 25px;
+	text-decoration: none;
+	font-size: 25px;
+	font-family: Verdana, Geneva, sans-serif;\
+	color: purple;
+	display: block;
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+	transition: 0.3s;
+}
+
+.menuGauche button{
+	font-size: 25px;
+	font-family: Verdana, Geneva, sans-serif;
+	color: purple;
+	display: block;
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+	margin-left: 25px;
+}
+
+.menuGauche .fermer{
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 95px;
+	margin-left: 50px;
+}
+
+/* Effet de survol du menu de gauche */
+
+.mg_contenu a:after{
+	z-index: -1;
+	position: absolute;
+	left: 0%;
+	width: 0;
+	height: 50px;
+	background: blue;
+	content: '';
+	transition: width 0.35s ease-in-out;
+}
+
+.mg_contenu a:hover:after{
+	width: 10%;
+}
+
+.mg_contenu a:hover{
+	padding-left: 55px;
+	transition: 0.30s ease-in-out;
+}
+
+/* Contenu de la page */
+
+#page_contenu {
+	transition: margin-left 0.5s;
+}
+
+/******************* Partie Sarah *******************/
+
+#boiteReception h1   {
+	color: white;
+	background-color: rgb(0, 0, 0, 0.8);
+	font-family: "Times New Roman", Times, serif;
+	font-size: 30px;
+	text-align:center;
+	text-transform: uppercase;
+	border-width: 1px 0px 1px 0px;
+	border-color:black;
+	border-style: solid;
+}
+
+#boiteReception li {
+	color:rgb(255, 255, 255, 0);
+	font-size: 18px;
+}
+
+
+#boiteReception .afficherEmails {
+	width:auto;
+	float:right;
+}
+
+#boiteReception {
+	background-color: rgb(240, 240, 240, 0.4);
+	align-text: center;
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	border-width:2px;
+	border-color:black;
+	border-style: solid;
+	font-size: 25px;
+	float:left;
+	}
+
+/******************* Partie Fatou *******************/
+
+#nouveauxMessages .sec-droite{
+		border:1px solid #838b8b;
+		height:400px;
+		width:75px;
+		position: absolute;
+		bottom:405px;
+		left:750px;
+	}
+#nouveauxMessages .sec-gauche{
+
+	}
+#nouveauxMessages	.button {
+	   padding-top: 10px;
+	   padding-left: 10px;
+	   max-width: 970px;
+	   height: 30px;
+	   margin-right = 10px;
+	}
+
+#nouveauxMessages	.Envoyer{
+	   float:right;
+	}
+#nouveauxMessages	.reset {
+	   float: left;
+	   }
+#nouveauxMessages form#Champ label {
+		   display:inline-block;
+		   width:50px;
+		   }
+#nouveauxMessages	form#Champ input {
+			display:inline-block;
+	}
+#nouveauxMessages	form#Champ button[type=submit] {
+			color:#fff; background-color:steelblue;
+	}
+#nouveauxMessages	form#Champ button[type=delete] {
+			color:#fff; background-color:darkred;
+	}
+
+/******************* Partie Valérie *******************/
