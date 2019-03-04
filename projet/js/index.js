@@ -12,21 +12,49 @@ document.getElementById("page_contenu").style.marginLeft = "0";
 document.getElementById("entete").style.marginLeft = "0";
 }
 
-// $(document).ready(function() {
-//   $("#nouveauMessageBouton").click(function() {
-//     $("#nouveauxMessages").show();
-//     $("#messagesEnvoyes").hide();
-//     $("#boiteReception").hide();
-//     $("#contact").hide();
-//   });
-// });
 
-// function ouvreSectionNM() {
-// document.getElementById("nouveauxMessages").style.width = 100%;
-// document.getElementById("messagesEnvoyes").style.width = "0";
-// document.getElementById("boiteReception").style.width = "0";
-// document.getElementById("contact").style.width = "0";
-// }
+$(document).ready(function() {
+  $("#NMBouton").click(function() {
+    $("#nouveauxMessages").show();
+	$("#nouveauxMessages").css("visibility", "visible");
+	$("#messagesEnvoyes").hide();
+    $("#boiteReception").hide();
+    $("#contact").hide();
+  });
+});
+
+$(document).ready(function() {
+  $("#BRBouton").click(function() {
+    $("#nouveauxMessages").hide();
+    $("#messagesEnvoyes").hide();
+    $("#boiteReception").show();
+    $("#contact").hide();
+  });
+});
+
+$(document).ready(function() {
+  $("#MEBouton").click(function() {
+    $("#nouveauxMessages").hide();
+    $("#messagesEnvoyes").show();
+	$("#messagesEnvoyes").css("visibility", "visible");
+    $("#boiteReception").hide();
+    $("#contact").hide();
+  });
+});
+$(document).ready(function() {
+  $("#CBouton").click(function() {
+    $("#nouveauxMessages").hide();
+    $("#messagesEnvoyes").hide();
+    $("#boiteReception").hide();
+    $("#contact").show();
+	$("#contact").css("visibility", "visible");
+  });
+});
+
+ 
+
+ 
+ 
 /**************************** Partie Sarah *****************************/
 function afficherAlbert(){
 	document.getElementById("Nom").innerHTML="De:    Albert J.  ";
