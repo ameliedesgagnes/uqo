@@ -46,8 +46,8 @@ $(document).ready(function() {
     $("#nouveauxMessages").hide();
     $("#messagesEnvoyes").hide();
     $("#boiteReception").hide();
-    $("#contact").show();
-	$("#contact").css("visibility", "visible");
+    $("#contacts").show();
+	$("#contacts").css("visibility", "visible");
   });
 });
 
@@ -67,14 +67,14 @@ function afficherAlbert(){
 function afficherGinette(){
 	document.getElementById("Nom").innerHTML="De: Ginette A. ";
 	document.getElementById("Sujet").innerHTML="Sujet: De tes nouvelles. ";
-	document.getElementById("paragraphe").innerHTML=" Allo, je voulais voir de tes nouvelles. J'esp�re que tu vas bien. Appelle moi svp. ";
+	document.getElementById("paragraphe").innerHTML=" Allo, je voulais voir de tes nouvelles. J'espère que tu vas bien. Appelle moi svp. ";
 	document.getElementById("signature").innerHTML=" -Ginette ";
 }
 
 function afficherBob(){
 	document.getElementById("Nom").innerHTML="De: Bob E. ";
 	document.getElementById("Sujet").innerHTML="Sujet: J'ai ton livre ";
-	document.getElementById("paragraphe").innerHTML=" Hey, j'ai le livre dont tu as besoin pour ton cours d'informatique. Il est arriv� hier. Je te l'am�ne en cours demain. Bonne soir�e! ";
+	document.getElementById("paragraphe").innerHTML=" Hey, j'ai le livre dont tu as besoin pour ton cours d'informatique. Il est arrivé hier. Je te l'amène en cours demain. Bonne soirée! ";
 	document.getElementById("signature").innerHTML=" -Bob ";
 }
 
@@ -86,8 +86,29 @@ function afficherBen(){
 }
 
 function afficherNora(){
-	document.getElementById("Nom").innerHTML="Nora S.";
-	document.getElementById("Sujet").innerHTML="Party ";
+	document.getElementById("Nom").innerHTML="De: Nora S.";
+	document.getElementById("Sujet").innerHTML="Sujet: Party ";
 	document.getElementById("paragraphe").innerHTML=" Salut, oublies pas le party de vendredi soir !! si tu as des questions appelle moi. ";
 	document.getElementById("signature").innerHTML=" -Nora ";
+}
+
+var fenetre = document.getElementById('fenetreContact');
+var btnAjout = document.getElementById("ajoutContact");
+var x = document.getElementsByClassName("fermer")[0];
+
+// Quand l'utilisateur clique sur +, la fenêtre s'ouvre
+btnAjout.onclick = function() {
+  fenetre.style.display = "block";
+}
+
+// Quand l'utilisateur clique sur x, la fenêtre se ferme
+x.onclick = function() {
+  fenetre.style.display = "none";
+}
+
+// Quand l'utilisateur clique n'importe où à l'extérieur de la fenêtre, la fenêtre se ferme
+window.onclick = function(event) {
+  if (event.target == fenetre) {
+    fenetre.style.display = "none";
+  }
 }
