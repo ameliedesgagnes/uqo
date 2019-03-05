@@ -105,15 +105,13 @@ body {
 	background-color: rgb(240, 240, 240, 0.4);
 	width:90%;
 	height: 600px;
-	margin-right:auto;
-	margin-left:200px;
+	margin-right:5%;
+	margin-left:5%;
 	border-width:2px;
 	border-color:black;
 	border-style: solid;
 	font-size: 25px;
 	float:center;
-	
-	
 	
 }
 #boiteReception #Nom   {
@@ -181,25 +179,28 @@ body {
 
 #nouveauxMessages {
 	visibility: hidden;
+	padding:5%;
 }
+
+#nouveauxMessages .sec-gauche{
+	float: left;
+	width:90%;
+	box-sizing: border-box;
+	padding:15px;
+	
+
+}
+
 #nouveauxMessages .sec-droite{
 	border:1px solid #838b8b;
+	background-color: white;
+	width:50px;
 	height:400px;
-	width:75px;
-	bottom:405px;
-	left:750px;
 	float:right;
+	box-sizing: border-box;
+	padding:15px;
 	}
-#nouveauxMessages .sec-gauche{
-		
-	}
-#nouveauxMessages	.button {
-	   padding-top: 10px;
-	   padding-left: 10px;
-	   max-width: 970px;
-	   height: 30px;
-	   margin-right = 10px;
-	}
+
 
 #nouveauxMessages	.Envoyer{
 	   float:right;
@@ -207,18 +208,21 @@ body {
 #nouveauxMessages	.reset {
 	   float: left;
 	   }
-#nouveauxMessages form#Champ label {
-		   display:inline-block;
-		   width:50px;
-		   }
-#nouveauxMessages	form#Champ input {
-			display:inline-block;
+
+#champ label{
+	display:block;
+}
+
+#champ input[type="text"], #champ textarea{
+	padding:8px;
+	width:100%;
+}
+
+#Champ button[type=submit] {
+		color:#fff; background-color:steelblue;
 	}
-#nouveauxMessages	form#Champ button[type=submit] {
-			color:#fff; background-color:steelblue;
-	}
-#nouveauxMessages	form#Champ button[type=delete] {
-			color:#fff; background-color:darkred;
+#Champ button[type=delete] {
+		color:#fff; background-color:darkred;
 	}
 
 /******************* Partie Valérie *******************/
@@ -226,8 +230,9 @@ body {
 #messagesEnvoyes {
 	visibility: hidden;
 	background-color: rgb(240, 240, 240, 0.4);
-	width:80%;
-	margin-left:200px;
+	width:90%;
+	margin-left:5%;
+	margin-right: 5%
 	border-width:2px;
 	border-color:black;
 	border-style: solid;
@@ -262,10 +267,10 @@ body {
 #contacts {
 	visibility: hidden;
 	background-color: rgb(240, 240, 240, 0.4);
-	width:80%;
+	width:90%;
 	height: auto;
-	margin-right:auto;
-	margin-left:200px;
+	margin-right:5%;
+	margin-left:5%;
 	border-width:2px;
 	border-color:black;
 	border-style: solid;
