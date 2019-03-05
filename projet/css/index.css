@@ -1,4 +1,4 @@
-/******************* Parti Amelie *******************/
+/******************* Partie Amélie *******************/
 
 body {
 	margin: auto;
@@ -113,6 +113,7 @@ body {
 
 #boiteReception h1   {
 	color: white;
+	width: 100%;
 	background-color: rgb(0, 0, 0, 0.8);
 	font-family: "Times New Roman", Times, serif;
 	font-size: 30px;
@@ -192,3 +193,163 @@ visibility: hidden;
 #messagesEnvoyes {
 visibility: hidden;
 }
+
+#contacts {
+	visibility: hidden;
+}
+
+/*Disposition des fiches de contact*/
+/* Trois colonnes côte-à-côte */
+.col {
+  float: left;
+  width: 30%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* Afficher les colonnes les unes en-dessous des autres lorsque la fenêtre est rapetissée */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    display: block;
+  }
+}
+
+.ficheContact {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); background-color: #FFF;
+}
+
+.contenuFiche {
+  padding: 0 16px;
+}
+
+/* Empêche éléments flottants de s'immiscer de chaque côté de la fiche */
+.contenuFiche::after, .li::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.relation {
+  color: grey;
+}
+
+.btnContact {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btnContact:hover {
+  background-color: #555;
+}
+
+#ajoutContact {
+  background: #92c7eb;
+  background-image: url("https://pngimage.net/wp-content/uploads/2018/05/bouton-ajouter-png-5.png");
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  border: none;
+  padding: 20px;
+  width: 70px;
+  border-radius: 900px;
+  height: 70px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+#ajoutContact:hover
+{
+  width: 75px;
+  height: 75px;
+}
+
+#submit {
+  background-color: #bbb;
+  padding: .5em;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+  font-family: 'Oswald';
+  font-size: 20px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+#submit:hover {
+  border: none;
+  background: pink;
+  box-shadow: 0px 0px 1px #777;
+}
+
+/*Création d'un contact*/
+/* La fenêtre (arrière-plan) */
+.fenetre {
+  display: none; /* Caché par défaut */
+  position: fixed;
+  z-index: 1; /* Demeure au-dessus */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Affichage des informations à saisir */
+.infoContact {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Ajout de l'animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* Le bouton Fermer */
+.fermer {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.fermer:hover,
+.fermer:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fenetreTête {
+  padding: 2px 16px;
+  background-color: #FE7F9C;
+  color: white;
+}
+
+.fenetreCorps {padding: 2px 16px;}
