@@ -95,6 +95,7 @@ body {
 
 #page_contenu {
 	transition: margin-left 0.5s;
+	
 }
 
 /******************* Partie Sarah *******************/
@@ -102,17 +103,48 @@ body {
 #boiteReception {
 	
 	background-color: rgb(240, 240, 240, 0.4);
-	width:1000px;
-	margin-left: 100px;
+	width:90%;
+	height: 600px;
 	margin-right:auto;
+	margin-left:200px;
 	border-width:2px;
 	border-color:black;
 	border-style: solid;
 	font-size: 25px;
+	float:center;
+	
+	
+	
+}
+#boiteReception #Nom   {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 40px;
+	
+	
+}
+
+#boiteReception #Sujet   {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 30px;
+	
+}
+
+#boiteReception #paragraphe   {
+	font-family: Courier New, Courier, monospace;
+	font-size: 25px;
+	text-align: justify;
+	
+}
+
+#boiteReception #signature   {
+	font-family: Courier New, Courier, monospace;
+	font-size: 25px;
+	
 }
 
 #boiteReception h1   {
 	color: white;
+	width: 100%;
 	background-color: rgb(0, 0, 0, 0.8);
 	font-family: "Times New Roman", Times, serif;
 	font-size: 30px;
@@ -130,14 +162,16 @@ body {
 
 
 #boiteReception .nouveauxMessages{
-	width:600px;
+	width:50%;
 	float:left;
 	
 	
 }
 #boiteReception .afficherEmails {
-	width:350px;
-	float:right;
+	width:40%;
+	float:left;
+	margin-right: 10%;
+	
 	
 	
 	
@@ -146,18 +180,18 @@ body {
 /******************* Partie Fatou *******************/
 
 #nouveauxMessages {
-visibility: hidden;
+	visibility: hidden;
 }
 #nouveauxMessages .sec-droite{
-		border:1px solid #838b8b;
-		height:400px;
-		width:75px;
-		position: absolute;
-		bottom:405px;
-		left:750px;
+	border:1px solid #838b8b;
+	height:400px;
+	width:75px;
+	bottom:405px;
+	left:750px;
+	float:right;
 	}
 #nouveauxMessages .sec-gauche{
-
+		
 	}
 #nouveauxMessages	.button {
 	   padding-top: 10px;
@@ -190,5 +224,223 @@ visibility: hidden;
 /******************* Partie Valérie *******************/
 
 #messagesEnvoyes {
-visibility: hidden;
+	visibility: hidden;
+	background-color: rgb(240, 240, 240, 0.4);
+	width:80%;
+	margin-left:200px;
+	border-width:2px;
+	border-color:black;
+	border-style: solid;
+	font-size: 25px;
+	float:center;
 }
+
+#messagesEnvoyes h3 {
+	color: white;
+	width: 100%;
+	background-color: rgb(0, 0, 0, 0.8);
+	font-family: "Times New Roman", Times, serif;
+	font-size: 30px;
+	text-align:center;
+	text-transform: uppercase;
+	border-width: 1px 0px 1px 0px;
+	border-color:black;
+	border-style: solid;
+}
+
+#messagesEnvoyes #MEbox {
+	font-family: Courier New, Courier, monospace;
+	font-size: 25px;
+	width: 100%;
+	height:500px;
+	text-align:center;
+	
+	
+}
+
+/******************* Page contacts *******************/
+#contacts {
+	visibility: hidden;
+	background-color: rgb(240, 240, 240, 0.4);
+	width:80%;
+	height: auto;
+	margin-right:auto;
+	margin-left:200px;
+	border-width:2px;
+	border-color:black;
+	border-style: solid;
+	font-size: 25px;
+	float:center;
+}
+
+#contacts h1 {
+	color: white;
+	width: 100%;
+	background-color: rgb(0, 0, 0, 0.8);
+	font-family: "Times New Roman", Times, serif;
+	font-size: 30px;
+	text-align:center;
+	text-transform: uppercase;
+	border-width: 1px 0px 1px 0px;
+	border-color:black;
+	border-style: solid;
+
+	
+}
+
+/*Disposition des fiches de contact*/
+/* Trois colonnes côte-à-côte */
+#contacts .col {
+  float: left;
+  width: 30%;
+  height: 15%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* Afficher les colonnes les unes en-dessous des autres lorsque la fenêtre est rapetissée */
+@media screen and (max-width: 650px) {
+ #contacts .col {
+    width: 100%;
+    display: block;
+  }
+}
+
+#contacts .ficheContact {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); background-color: #FFF;
+}
+
+#contacts .contenuFiche {
+  padding: 0 16px;
+}
+
+/* Empêche éléments flottants de s'immiscer de chaque côté de la fiche */
+#contacts .contenuFiche::after, .li::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#contacts .relation {
+  color: grey;
+}
+
+#contacts .btnContact {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+#contacts .btnContact:hover {
+  background-color: #555;
+}
+
+#contacts #ajoutContact {
+  background: #92c7eb;
+  background-image: url("https://pngimage.net/wp-content/uploads/2018/05/bouton-ajouter-png-5.png");
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  border: none;
+  padding: 20px;
+  width: 70px;
+  border-radius: 900px;
+  height: 70px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+#contacts #ajoutContact:hover
+{
+  width: 75px;
+  height: 75px;
+}
+
+#contacts #submit {
+  background-color: #bbb;
+  padding: .5em;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+  font-family: 'Oswald';
+  font-size: 20px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+#contacts #submit:hover {
+  border: none;
+  background: pink;
+  box-shadow: 0px 0px 1px #777;
+}
+
+/*Création d'un contact*/
+/* La fenêtre (arrière-plan) */
+#contacts .fenetre {
+  display: none; /* Caché par défaut */
+  position: fixed;
+  z-index: 1; /* Demeure au-dessus */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Affichage des informations à saisir */
+#contacts .infoContact {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Ajout de l'animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* Le bouton Fermer */
+#contacts .fermer {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#contacts .fermer:hover,
+#contacts .fermer:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#contacts .fenetreTête {
+  padding: 2px 16px;
+  background-color: #FE7F9C;
+  color: white;
+}
+
+#contacts .fenetreCorps {padding: 2px 16px;}
