@@ -10,9 +10,7 @@
 		<link rel="stylesheet" href="index.css">
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="index.js"></script>
-		<script type="text/javascript" src="adresses.js"></script>
-		<script type="text/javascript" src="messages.js"></script>
-		<title>Marthi Mail</title>
+		<title>Marthy Mail</title>
 	</head>
 
 	<body>
@@ -59,10 +57,10 @@
 				</div>
 			</div>	<!--  fin div boiteReception -->
 
-<!-- **************************** Partie Valérie ***************************** -->
+<!-- **************************** Partie Valérie - 1 ***************************** -->
 			<div id="messagesEnvoyes">
 				<h3>Messages envoyés &#9654;&#9654;&#9654;</h3>
-			  <div style="width:80%;height:500px;border:1px solid #000;text-align:center;">
+			  <div style="width:80%;height:500px;border:1px solid #000;text-align:center;background-color:#FFF">
 					Aucun message envoyé<img src="" width="200 px"></div>
 			</div>
 
@@ -112,8 +110,69 @@
 		    </form>
 			</div> <!-- fin de nouveauxMessages  -->
 
-<!-- **************************** À faire ***************************** -->
-			<div id="contact" ></div>
+<!-- **************************** Partie Valérie - 2 ***************************** -->
+			<div id="contacts" ></div>
+			<h1>Contacts</h1>
+  <div class="li">
+  <div class="col">
+    <div class="ficheContact">
+      <img src="https://cdn2.iconfinder.com/data/icons/gaming-and-beyond-part-2-1/80/User_gray-512.png" alt="Julie" style="width:100%">
+      <div class="contenuFiche">
+        <h2>Julie Désormeaux</h2>
+        <p class="relation">Mère</p>
+        <p>jdesormeaux@gmail.com</p>
+        <p><button class="btnContact">Contacter</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="ficheContact">
+      <img src="https://cdn2.iconfinder.com/data/icons/gaming-and-beyond-part-2-1/80/User_gray-512.png" alt="Michel" style="width:100%">
+      <div class="contenuFiche">
+        <h2>Michel Pinard</h2>
+        <p class="relation">Frère</p>
+        <p>michel.pinard123@hotmail.ca</p>
+        <p><button class="btnContact">Contacter</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="ficheContact">
+      <img src="https://cdn2.iconfinder.com/data/icons/gaming-and-beyond-part-2-1/80/User_gray-512.png" alt="Robert" style="width:100%">
+      <div class="contenuFiche">
+        <h2>Robert Milan</h2>
+        <p class="relation">Patron</p>
+        <p>rmilan3467@gmail.com</p>
+        <p><button class="btnContact">Contacter</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Créer un nouveau contact -->
+<button id="ajoutContact"></button>
+
+<div id="fenetreContact" class="fenetre">
+
+  <div class="infoContact">
+  	<div class="fenetreTête">
+      <span class="fermer">&times;</span>
+      <h2>Nouveau contact</h2>
+    </div>
+    <div class="fenetreCorps">
+    <form>
+    	<br>
+    	Nom: <input type="txt"><br>
+    	Prénom: <input type="txt"><br>
+    	Courriel: <input type="txt"><br>
+    	Téléphone: <input type="num"><br><br>
+    	<button id="submit">Créer</button>
+    </form>
+    </div>
+  </div>
+</div>
 
 		</div>
 
