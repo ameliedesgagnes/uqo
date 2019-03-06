@@ -1,4 +1,4 @@
-/****************** Partie Amelie **********************/
+/****************** Menu de gauche **********************/
 
 function ouvreMG() {
 document.getElementById("menuGauche").style.width = "350px";
@@ -19,7 +19,7 @@ $(document).ready(function() {
 	$("#nouveauxMessages").css("visibility", "visible");
 	$("#messagesEnvoyes").hide();
     $("#boiteReception").hide();
-    $("#contact").hide();
+    $("#contacts").hide();
   });
 });
 
@@ -28,7 +28,7 @@ $(document).ready(function() {
     $("#nouveauxMessages").hide();
     $("#messagesEnvoyes").hide();
     $("#boiteReception").show();
-    $("#contact").hide();
+    $("#contacts").hide();
   });
 });
 
@@ -38,7 +38,7 @@ $(document).ready(function() {
     $("#messagesEnvoyes").show();
 	$("#messagesEnvoyes").css("visibility", "visible");
     $("#boiteReception").hide();
-    $("#contact").hide();
+    $("#contacts").hide();
   });
 });
 $(document).ready(function() {
@@ -52,10 +52,8 @@ $(document).ready(function() {
 });
 
  
-
  
- 
-/**************************** Partie Sarah *****************************/
+/**************************** Boite de réception*****************************/
 function afficherAlbert(){
 	document.getElementById("Nom").innerHTML="De:    Albert J.  ";
 	document.getElementById("Sujet").innerHTML="Sujet: Retour de mon voyage ";
@@ -91,6 +89,8 @@ function afficherNora(){
 	document.getElementById("paragraphe").innerHTML=" Salut, oublies pas le party de vendredi soir !! si tu as des questions appelle moi. ";
 	document.getElementById("signature").innerHTML=" -Nora ";
 }
+
+/**************************** Contacts*****************************/
 
 var fenetre = document.getElementById('fenetreContact');
 var btnAjout = document.getElementById("ajoutContact");
