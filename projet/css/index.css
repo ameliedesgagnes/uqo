@@ -179,14 +179,36 @@ body {
 
 #nouveauxMessages {
 	visibility: hidden;
-	padding:5%;
+	
+	background-color: rgb(240, 240, 240, 0.4);
+	width:80%;
+	height: 700px;
+	margin-right:5%;
+	margin-left:5%;
+	border-width:2px;
+	border-color:black;
+	border-style: solid;
+	font-size: 25px;
+	float:center;
+}
+#nouveauxMessages h1   {
+	color: white;
+	width: 100%;
+	background-color: rgb(0, 0, 0, 0.8);
+	font-family: "Times New Roman", Times, serif;
+	font-size: 30px;
+	text-align:center;
+	text-transform: uppercase;
+	border-width: 1px 0px 1px 0px;
+	border-color:black;
+	border-style: solid;
 }
 
 #nouveauxMessages .sec-gauche{
 	float: left;
-	width:90%;
+	width:50%;
 	box-sizing: border-box;
-	padding:15px;
+	padding-left:100px;
 	
 
 }
@@ -196,7 +218,7 @@ body {
 	background-color: white;
 	width:50px;
 	height:400px;
-	float:right;
+	float:left;
 	box-sizing: border-box;
 	padding:15px;
 	}
@@ -444,8 +466,26 @@ body {
 
 #contacts .fenetreTête {
   padding: 2px 16px;
-  background-color: #FE7F9C;
+  background-color: rgb(234, 68, 180);
   color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  text-align:center;
+  text-transform: uppercase;
+;
 }
 
-#contacts .fenetreCorps {padding: 2px 16px;}
+#contacts .fenetreCorps {
+	padding: 2px 16px;
+
+	
+	
+	}
+	
+#contacts .fenetreCorps form {
+	
+	font-family: "Times New Roman", Times, serif;
+	font-size: 25px;
+	
+	
+	}
