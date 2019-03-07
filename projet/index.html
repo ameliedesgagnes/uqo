@@ -2,180 +2,172 @@
 
 <html>
 
+  <head>
+    <meta name="author" content="Amélie Desgagnés, Sarah Robert, Valérie Boivert, Fatoumata Dioulde Diallo">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <title>Marthy Mail</title>
+  </head>
 
-	<head>
-		<meta name="author" content="Amélie Desgagnés(desa111),
-		*Ajouter vos noms...">
-		<meta charset="UTF-8">
-		<link rel="stylesheet" href="index.css">
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
-		<script type="text/javascript" src="index.js"></script>
-		<title>Marthy Mail</title>
-	</head>
+  <body>
 
-	<body>
+    <div class="menuGauche" id="menuGauche">
+      <a style="font-size: 45px; cursor: pointer; color: white" href="javascript:void(0)" class="fermerMG" onclick="fermeMG()">&times;</a>
+      <nav class="mg_contenu">
+        <button href="javascript:void(0)" type="button" id="NMBouton" onclick="ouvreSectionNM()" style="font-family: Courier New, Courier, monospace; color: white; background-color: rgb(0, 0, 0, 0.8); width:300px; margin:25px; padding: 10px 2px 10px 2px; border-color:black; border-style: solid;">Nouveau Message </button>
+        <a href="javascript:void(0)" id="BRBouton" onclick="ouvreSectionBR()" style= "color: white; text-transform: uppercase;">Boite de reception</a>
+        <a href="javascript:void(0)" id="MEBouton" onclick="ouvreSectionME()" style= "color: white; text-transform: uppercase;">Messages envoyes</a>
+        <a href="javascript:void(0)" id="CBouton" onclick="ouvreSectionC()" style= "color: white; text-transform: uppercase;">Contacts</a>
+      </nav>
+    </div>
 
-		<div class="menuGauche" id="menuGauche">
-			<a style="font-size: 45px; cursor: pointer; color: white" href="javascript:void(0)" class="fermer" onclick="fermeMG()">&times;</a>
-			<nav class="mg_contenu">
-				<button href="javascript:void(0)" type="button" id="NMBouton" onclick="ouvreSectionNM()" style="font-family: Courier New, Courier, monospace; color: white; background-color: rgb(0, 0, 0, 0.8); width:300px; margin:25px; padding: 10px 2px 10px 2px; border-color:black; border-style: solid;">Nouveau Message </button>
-				<a href="javascript:void(0)" id="BRBouton" onclick="ouvreSectionBR()" style= "color: white; text-transform: uppercase;">Boite de reception</a>
-				<a href="javascript:void(0)" id="MEBouton" onclick="ouvreSectionME()" style= "color: white; text-transform: uppercase;">Messages envoyes</a>
-				<a href="javascript:void(0)" id="CBouton" onclick="ouvreSectionC()" style= "color: white; text-transform: uppercase;">Contacts</a>
-			</nav>
-		</div>
+    <header>
+    <h1 id="entete">Marthy Mail</h1>
+    <img src="https://i-h1.pinimg.com/564x/65/38/a5/6538a58cb65adddda42356fa174cc44e.jpg" id="logo">
+    </header>
 
-		<header>
-		<h1 id="entete">Marthy Mail</h1>
-		</header>
+    <hr>
 
-		<hr>
+    <div style="font-size: 45px; padding-left: 20px; cursor: pointer; color: white" onclick="ouvreMG()">&#9776;</div>
 
-		<div style="font-size: 45px; padding-left: 20px; cursor: pointer; color: white" onclick="ouvreMG()">&#9776;</div>
+    <div id="page_contenu">
 
-		<div id="page_contenu">
+<!-- **************************** Page Boite de Reception ***************************** -->
+      <div id="boiteReception" >
+        <h1> Boite de reception </h1>
+        <div class= "nouveauxMessages">
+          <ul>
+            <li><input type="button"  onclick="afficherAlbert()" value="Albert J.  :  Retour de mon voyage" style="width:80%; font-size: 20px; font-family: Courier New, Courier, monospace; color: white; text-align: left; background-color: rgb(0, 0, 0, 0.8); margin:10px; padding: 10px 2px 10px 2px; border-width:2px; border-color:black; border-style: solid;"></li>
+            <li><input type="button" onclick="afficherGinette()" value="Ginette A. :  De tes nouvelles. " style="width:80%;font-size: 20px; font-family: Courier New, Courier, monospace; color: white; text-align: left; background-color: rgb(0, 0, 0, 0.8);  margin:10px; padding: 10px 2px 10px 2px; border-width:2px; border-color:black; border-style: solid;"></li>
+            <li><input type="button" onclick="afficherBob()" value="Bob E.     :  J'ai ton livre " style="width:80%;font-size: 20px; font-family: Courier New, Courier, monospace; color: white; text-align: left; background-color: rgb(0, 0, 0, 0.8); margin:10px; padding: 10px 2px 10px 2px; border-width:2px; border-color:black; border-style: solid;"></li>
+            <li><input type="button" onclick="afficherBen()" value="Ben M.     :  Note de cours " style="width:80%;font-size: 20px; font-family: Courier New, Courier, monospace; color: white; text-align: left; background-color: rgb(0, 0, 0, 0.8);  margin:10px; padding: 10px 2px 10px 2px; border-width:2px; border-color:black; border-style: solid;"></li>
+            <li><input type="button" onclick="afficherNora()" value="Nora S.    : Party" style="width:80%;font-size: 20px; font-family: Courier New, Courier, monospace; color: white; text-align: left; background-color: rgb(0, 0, 0, 0.8); margin:10px; padding: 10px 2px 10px 2px; border-width:2px; border-color:black; border-style: solid;"></li>
+          </ul>
+        </div>
 
-<!-- **************************** Partie Sarah ***************************** -->
-			<div id="boiteReception" >
-				<h1> Boite de reception </h1>
-				<div class= "nouveauxMessages">
-					<ul>
-						<li><input type="button"  onclick="afficherAlbert()" value="Albert J.  :		Retour de mon voyage" style="width:500px; font-family: Courier New, Courier, monospace; color: white; text-align: left; background-color: rgb(0, 0, 0, 0.8);	margin:10px; padding: 10px 2px 10px 2px; border-width:2px; border-color:black; border-style: solid;"></li>
-						<li><input type="button" onclick="afficherGinette()" value="Ginette A. :		De tes nouvelles. " style="width:500px; font-family: Courier New, Courier, monospace; color: white; text-align: left; background-color: rgb(0, 0, 0, 0.8);	margin:10px; padding: 10px 2px 10px 2px; border-width:2px; border-color:black; border-style: solid;"></li>
-						<li><input type="button" onclick="afficherBob()" value="Bob E.     :		J'ai ton livre " style="width:500px; font-family: Courier New, Courier, monospace; color: white; text-align: left; background-color: rgb(0, 0, 0, 0.8);	margin:10px; padding: 10px 2px 10px 2px; border-width:2px; border-color:black; border-style: solid;"></li>
-						<li><input type="button" onclick="afficherBen()" value="Ben M.     :		Note de cours " style="width:500px; font-family: Courier New, Courier, monospace; color: white; text-align: left; background-color: rgb(0, 0, 0, 0.8);	margin:10px; padding: 10px 2px 10px 2px; border-width:2px; border-color:black; border-style: solid;"></li>
-						<li><input type="button" onclick="afficherNora()" value="Nora S.    :		Party" style="width:500px; font-family: Courier New, Courier, monospace; color: white; text-align: left; background-color: rgb(0, 0, 0, 0.8);	margin:10px; padding: 10px 2px 10px 2px; border-width:2px; border-color:black; border-style: solid;"></li>
-					</ul>
-				</div>
+        <div class= "afficherEmails">
 
-				<div class= "afficherEmails">
+          <h2 id="Nom">  </h2>
+          <h2 id="Sujet">  </h2>
+          <p id="paragraphe"> </p>
+          <p id="signature"></p>
+        </div>
+      </div>  <!--  fin div boiteReception -->
 
-					<h2 id="Nom">  </h2>
-					<h2 id="Sujet">  </h2>
-					<p id="paragraphe"> </p>
-					<p id="signature"></p>
-				</div>
-			</div>	<!--  fin div boiteReception -->
-
-<!-- **************************** Partie Valérie - 1 ***************************** -->
-			<div id="messagesEnvoyes">
-				<h3>Messages envoyés &#9654;&#9654;&#9654;</h3>
-			  <div style="width:80%;height:500px;border:1px solid #000;text-align:center;background-color:#FFF">
-					Aucun message envoyé<img src="" width="200 px"></div>
-			</div>
-
-<!-- **************************** Partie Fatou ***************************** -->
-			<div id="nouveauxMessages">
-				<form  id="Champ" action="nouveauMessage" target = "_blank" method="POST" >
-
-		        <div class= "first-section">
-
-						<p><label for="mail">E-mail:</label>
-						<input type="email" id="mail" name="user_mail" size="91">
-					    </p>
-
-						<p><label for="CC">CC: </label>
-						<input type="CC" id="mail" name="CC" size="91" >
-					    </p>
-
-						<p><label for="Sujet">Sujet:</label>
-						<input type="Sujet" id="mail" name="Sujet" size="91" >
-					    </p>
-
-		        </div>
-
-					<div class= "sec-gauche">
-						<label for="NouveauMessage">
-							<textarea id="msg" name="user_message"  placeholder= "composer votre nouveau message" Cols="100" rows="50" ></textarea>
-						</label>
-					</div>
-
-					<div class= "sec-droite">
-					 <!-- trouver comment placer des images ici -->
-					<p> <img src="http://www.exempledesiteweb.com/image.jpg" alt="joindre fichier "/></p>
-					<p><img src="http://www.exempledesiteweb.com/image.jpg" alt="insérer un lien "/></p>
-					<p><img src="http://www.exempledesiteweb.com/image.jpg" alt="émoticone"/></p>
-					<p> <img src="http://www.exempledesiteweb.com/image.jpg" alt="Clavier A"/></p>
-
-					</div>
-
-				  <!-- pour les bouton : envoyer et supprimer qui ramène vers la page de la boite de réception-->
-
-				  <div class= "button">
-					<a href="laBoiteDeRéception.html" target="_blank">
-				    <button class='reset' type="delete" value="Supprimer" name="Supprimer">X</button></a>
-					<a href="laBoiteDeRéception.html" target="_blank">
-					<button class="Envoyer" type="submit" value="Envoyer" name="Envoyer">Send</button></a>
-				  </div>
-		    </form>
-			</div> <!-- fin de nouveauxMessages  -->
-
-<!-- **************************** Partie Valérie - 2 ***************************** -->
-			<div id="contacts" ></div>
-			<h1>Contacts</h1>
-  <div class="li">
-  <div class="col">
-    <div class="ficheContact">
-      <img src="https://cdn2.iconfinder.com/data/icons/gaming-and-beyond-part-2-1/80/User_gray-512.png" alt="Julie" style="width:100%">
-      <div class="contenuFiche">
-        <h2>Julie Désormeaux</h2>
-        <p class="relation">Mère</p>
-        <p>jdesormeaux@gmail.com</p>
-        <p><button class="btnContact">Contacter</button></p>
+<!-- **************************** Page Message Envoyés ***************************** -->
+      <div id="messagesEnvoyes">
+        <h3>Messages envoyés &#9654;&#9654;&#9654;</h3>
+        <div id="MEbox">
+          Aucun message envoyé<img src="https://i-h1.pinimg.com/564x/35/f4/9e/35f49ed3982fa7883d9a16efa1be119b.jpg" id="martre"></div>
       </div>
-    </div>
-  </div>
 
-  <div class="col">
-    <div class="ficheContact">
-      <img src="https://cdn2.iconfinder.com/data/icons/gaming-and-beyond-part-2-1/80/User_gray-512.png" alt="Michel" style="width:100%">
-      <div class="contenuFiche">
-        <h2>Michel Pinard</h2>
-        <p class="relation">Frère</p>
-        <p>michel.pinard123@hotmail.ca</p>
-        <p><button class="btnContact">Contacter</button></p>
+<!-- **************************** Page Nouveaux Messages ***************************** -->
+      <div id="nouveauxMessages">
+        <h1> Nouveau Message </h1>
+        <form  id="Champ" action="nouveauMessage" target = "_blank" method="POST" >
+
+            <div class= "sec-gauche">
+
+            <p><label for="mail">E-mail:</label>
+            <input type="email" id="mail" name="user_mail" size=90%>
+              </p>
+
+            <p><label for="CC">CC: </label>
+            <input type="text" id="mail" name="CC" size=90%  >
+              </p>
+
+            <p><label for="Sujet">Sujet:</label>
+            <input type="text" id="mail" name="Sujet" size=90% >
+              </p>
+            <label for="NouveauMessage">
+              <textarea name="user_message"  placeholder= "Composer votre nouveau message" cols="100" rows="20"></textarea>
+            </label>
+          <br>
+
+          <button class='reset' type="supprimer">X</button>
+          <button class="Envoyer" type="soumettre">Send</button>
+            </div>
+
+        <div class= "sec-droite">
+           <!-- Émoticônes sur le côté -->
+          <img src="https://cdn3.iconfinder.com/data/icons/miniglyphs/500/064-512.png" alt="joindre fichier " height=30px width=30px/>
+          <br>
+          <img src="https://cdn2.iconfinder.com/data/icons/web/512/Link-512.png" alt="insérer un lien " height=30px width=30px/>
+          <br>
+          <img src="https://cdn3.iconfinder.com/data/icons/emoticons-48/100/Smileys_umgewandelt-09-512.png" alt="emoticone" height=30px width=30px/>
+          <br>
+          <img src="https://image.flaticon.com/icons/png/512/25/25645.png" alt="Clavier A" height=30px width=30px/>
+        </div>
+
+          
+        </form>
+      </div> <!-- fin de nouveauxMessages  -->
+
+<!-- **************************** Page Contacts ***************************** -->
+    <div id="contacts" >
+      <h1>Contacts</h1>
+       <div class="li">
+          <div class="col">
+            <div class="ficheContact">
+               <img src="https://cdn2.iconfinder.com/data/icons/gaming-and-beyond-part-2-1/80/User_gray-512.png" alt="Julie" style="width:20%">
+                <div class="contenuFiche">
+                  <h2>Julie Désormeaux</h2>
+                  <p class="relation">Mère</p>
+                  <p>jdesormeaux@gmail.com</p>
+                  <p><button class="btnContact">Contacter</button></p>
+               </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="ficheContact">
+              <img src="https://cdn2.iconfinder.com/data/icons/gaming-and-beyond-part-2-1/80/User_gray-512.png" alt="Michel" style="width:20%">
+              <div class="contenuFiche">
+                  <h2>Michel Pinard</h2>
+                  <p class="relation">Frère</p>
+                  <p>michel.pinard123@hotmail.ca</p>
+                  <p><button class="btnContact">Contacter</button></p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="ficheContact">
+               <img src="https://cdn2.iconfinder.com/data/icons/gaming-and-beyond-part-2-1/80/User_gray-512.png" alt="Robert" style="width:20%">
+                <div class="contenuFiche">
+                  <h2>Robert Milan</h2>
+                  <p class="relation">Patron</p>
+                  <p>rmilan3467@gmail.com</p>
+                  <p><button class="btnContact">Contacter</button></p>
+                </div>
+            </div>
+          </div>
       </div>
-    </div>
-  </div>
 
-  <div class="col">
-    <div class="ficheContact">
-      <img src="https://cdn2.iconfinder.com/data/icons/gaming-and-beyond-part-2-1/80/User_gray-512.png" alt="Robert" style="width:100%">
-      <div class="contenuFiche">
-        <h2>Robert Milan</h2>
-        <p class="relation">Patron</p>
-        <p>rmilan3467@gmail.com</p>
-        <p><button class="btnContact">Contacter</button></p>
+    <!-- Créer un nouveau contact -->
+      <button id="ajoutContact"></button>
+
+      <div id="fenetreContact" class="fenetre">
+        <div class="infoContact">
+            <div class="fenetreTête">
+                <span class="fermer">&times;</span>
+                <h2>Nouveau contact</h2>
+            </div>
+            <div class="fenetreCorps">
+              <form>
+              <br>
+                Nom: <input type="txt"><br>
+                Prénom: <input type="txt"><br>
+                Courriel: <input type="txt"><br>
+                Téléphone: <input type="num"><br><br>
+                <button id="submit">Créer</button>
+              </form>
+            </div>
+          </div>
       </div>
+      <script type="text/javascript" src="index.js"></script>
     </div>
-  </div>
-</div>
-
-<!-- Créer un nouveau contact -->
-<button id="ajoutContact"></button>
-
-<div id="fenetreContact" class="fenetre">
-
-  <div class="infoContact">
-  	<div class="fenetreTête">
-      <span class="fermer">&times;</span>
-      <h2>Nouveau contact</h2>
-    </div>
-    <div class="fenetreCorps">
-    <form>
-    	<br>
-    	Nom: <input type="txt"><br>
-    	Prénom: <input type="txt"><br>
-    	Courriel: <input type="txt"><br>
-    	Téléphone: <input type="num"><br><br>
-    	<button id="submit">Créer</button>
-    </form>
-    </div>
-  </div>
-</div>
-
-		</div>
-
-	</body>
-
+  </body>
 </html>
